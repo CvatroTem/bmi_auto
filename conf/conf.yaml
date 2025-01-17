@@ -1,0 +1,57 @@
+
+host_sess: "172.16.0.160"
+port_sess: "3306"
+user_sess: "tester"
+pass_sess: "test01"
+
+#connect_base: "goodwin_bmi_test2"
+connect_base: "goodwin_bmi_prod"
+#connect_base: "goodwin_termit_prod"
+#connect_base: "goodwin_ural_prod"
+#connect_base: "goodwin_ascaner_prod"
+
+
+name_table: "bmi_module"
+#name_table: "termit_module"
+#name_table: "ural_module"
+#name_table: "ascaner_module"
+
+
+modules:
+  - "BMI"
+  - "Bracelet"
+  - "G-Tracker"
+  - "Termit"
+  - "Ural"
+  - "A-Scaner"
+
+boards:
+  - "1.1"
+  - "1.2"
+  - "1.5"
+  - "1.7"
+  - "2.0"
+  - "2.1"
+  - "3.3"
+  - "8.6"
+  - "25.3"
+  - "25.4"
+
+
+builds:
+  - "1.0"
+  - "1.1"
+
+
+name_columns:
+- "DATETIME_ID"
+- "USER"
+- "NAME_VER"
+- "BOARD_VER"
+- "BUILD_VER"
+- "VALUES ( %s, %s, %s, %s, %s )"
+
+ssh_host: "172.16.1.41"
+ssh_username: "goodwin"
+ssh_password: "admin11"
+new_ssh_password: Rootadmin11!
