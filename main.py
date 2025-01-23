@@ -204,7 +204,7 @@ class PrintQR(QMainWindow, Ui_PrintQR):
             if module_name == "G-Tracker":
                 counts = list(range(2, 9))  # 2-8
             elif module_name in ["Радиометка КСИЗ", "Радиомаяк"]:
-                counts = list(range(1, 17))  # 1-16
+                counts = list(range(1, 33))  # 1-32 # Количество маяков в комплекте 32
             else:
                 counts = [next_number]
 
@@ -241,7 +241,7 @@ class PrintQR(QMainWindow, Ui_PrintQR):
             if module_name == "G-Tracker":
                 next_number = current_number + 1 if current_number < 8 else 2
             elif module_name in ["Радиометка КСИЗ", "Радиомаяк"]:
-                next_number = current_number + 1 if current_number < 16 else 1
+                next_number = current_number + 1 if current_number < 32 else 1 # Количество маяков в комплекте 32
             else:
                 next_number = current_number  # По умолчанию без изменений
 
@@ -256,7 +256,7 @@ class PrintQR(QMainWindow, Ui_PrintQR):
         if module_name == "G-Tracker":
             next_number = current_number + 1 if current_number < 8 else 2
         elif module_name in ["Радиометка КСИЗ", "Радиомаяк"]:
-            next_number = current_number + 1 if current_number < 16 else 1
+            next_number = current_number + 1 if current_number < 32 else 1 # Количество маяков в комплекте 32
         else:
             next_number = current_number  # По умолчанию без изменений
         
@@ -301,7 +301,7 @@ class PrintQR(QMainWindow, Ui_PrintQR):
         if module_name == "G-Tracker":
             max_value = 8
         elif module_name in ["Радиометка КСИЗ", "Радиомаяк"]:
-            max_value = 16
+            max_value = 32 # Количество маяков в комплекте 32
         else:
             max_value = selected_number  # Должно соответствовать выбранному номеру
         
