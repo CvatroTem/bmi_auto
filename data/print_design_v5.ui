@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>606</width>
-    <height>385</height>
+    <width>657</width>
+    <height>478</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,10 +57,24 @@
        <bool>false</bool>
       </property>
       <layout class="QGridLayout" name="gridLayout_6">
+       <item row="1" column="0">
+        <widget class="QLabel" name="LabelUser">
+         <property name="text">
+          <string>Имя пользователя</string>
+         </property>
+        </widget>
+       </item>
        <item row="0" column="0">
         <widget class="QLabel" name="LabelHost">
          <property name="text">
           <string>Адрес сервера</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="LabelBD">
+         <property name="text">
+          <string>Имя базы данных</string>
          </property>
         </widget>
        </item>
@@ -77,53 +91,10 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="LabelUser">
-         <property name="text">
-          <string>Имя пользователя</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="InputUser">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>0</height>
-          </size>
-         </property>
-        </widget>
-       </item>
        <item row="2" column="0">
         <widget class="QLabel" name="LabelPass">
          <property name="text">
           <string>Пароль пользователя</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="InputPass">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="LabelBD">
-         <property name="text">
-          <string>Имя базы данных</string>
          </property>
         </widget>
        </item>
@@ -149,6 +120,35 @@
          </property>
          <property name="readOnly">
           <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="InputUser">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="InputPass">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
          </property>
         </widget>
        </item>
@@ -249,6 +249,13 @@
         <string>Копирование QR</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Идентификатор</string>
+          </property>
+         </widget>
+        </item>
         <item row="1" column="2">
          <widget class="QComboBox" name="BoxName">
           <property name="minimumSize">
@@ -259,10 +266,10 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="0" colspan="3">
-         <widget class="QLabel" name="text">
+        <item row="1" column="1">
+         <widget class="QLabel" name="LabelName">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выберете устройство из списка, отсканируйте&lt;br/&gt; QR-code с помощью сканера, или введите &lt;br/&gt;идентификатор вручную.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>Устройство</string>
           </property>
          </widget>
         </item>
@@ -279,20 +286,6 @@
           </property>
           <property name="text">
            <string/>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>Идентификатор</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QLabel" name="LabelName">
-          <property name="text">
-           <string>Устройство</string>
           </property>
          </widget>
         </item>
@@ -315,15 +308,15 @@
           </property>
          </widget>
         </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QLabel" name="text">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выберете устройство из списка, отсканируйте&lt;br/&gt; QR-code с помощью сканера, или введите &lt;br/&gt;идентификатор вручную.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
-     </widget>
-    </item>
-    <item row="1" column="0" colspan="2">
-     <widget class="QProgressBar" name="ProgressBar">
-      <property name="value">
-       <number>15</number>
-      </property>
      </widget>
     </item>
     <item row="2" column="0" colspan="2">
@@ -333,6 +326,13 @@
         <width>0</width>
         <height>150</height>
        </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QProgressBar" name="ProgressBar">
+      <property name="value">
+       <number>15</number>
       </property>
      </widget>
     </item>
